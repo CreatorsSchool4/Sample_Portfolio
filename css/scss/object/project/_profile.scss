@@ -1,0 +1,22 @@
+// プロフィールセクションのデザイン設定ファイルです。
+
+@use "../../global/index" as *;
+
+.p-profile {
+    position: relative;
+    &__title {
+        font-size: clamp(2.25rem, 0.3502rem + 8.0415vw, 10rem);
+        @include media(pc) {
+            color: rgba($color: $main-color, $alpha: 0.3);
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 0.5em;
+            z-index: -1000;
+            transform: perspective(300px) rotate3d(0, -0.75, 1, 270deg);
+        }
+    }
+    &__image {
+        @include flexbox();
+    }
+}

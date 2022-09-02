@@ -1,0 +1,177 @@
+// ヘッダーセクション（ファーストビューの部分）の設定ファイルです。
+
+@use "../../global/index" as *;
+
+.p-header {
+    background: {
+        image: url("/img/picture/first-view-image.webp");
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+        attachment: fixed;
+    }
+    color: white;
+    // ファーストビューに設置するバナー類の設定
+    &__banner {
+        // バナー全体の設定
+        background-color: $main-color;
+        color: white;
+        font-weight: bold;
+
+        // p-header__bannerを$thisに代入
+        $this: &;
+        @include flexbox();
+
+        // PCのみ四角形にするためにサイズを固定
+        @include media(pc) {
+            width: $banner-size;
+            height: $banner-size;
+        }
+
+        // .p-header__banner-logo-text として出力
+        &-logo {
+            @include flexbox();
+            &-title {
+                font-size: 1.5rem;
+                @include flexbox();
+                @include media(pc) {
+                    display: none;
+                }
+            }
+        }
+
+        // 左上（SP:上）のバナー
+        &-top-left {
+            // SP表示
+            font-size: 3rem;
+            height: 50%;
+            // 常に前面表示させるためにZ-indexを指定。数字は1以上であればなんでもOK
+            z-index: 1000;
+            // PC表示
+            @include media(pc) {
+                height: $banner-size;
+                // 三角形に型抜き
+                font-size: 1.25rem;
+                clip-path: polygon(100% 0, 0 0, 0 100%);
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            // .p-header__banner-top-left .p-header__banner-text として出力
+            #{$this}-text {
+                @include flexbox();
+                // 本体を左上に寄せて、paddingで余白を確保
+                @include media(pc) {
+                    @include flexbox(flex-start, flex-start);
+                    padding: {
+                        top: 2rem;
+                        left: 2rem;
+                    }
+                }
+            }
+        }
+        // 右下（SP：下部固定）のバナー
+        // CSSで変形させていますが、別途バナー用のHTMLタグを追加したほうが管理しやすいです。
+        &-bottom-right {
+            // SP表示（下部に固定しています）
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: block;
+            padding: 1rem 0.5rem;
+            text-align: center;
+            // 常に前面表示させるためにZ-indexを指定。数字は1以上であればなんでもOK
+            z-index: 1000;
+            // PC表示
+            @include media(pc) {
+                // 三角形に型抜きして、左上に固定
+                clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                left: 100%;
+                transform: translateX(-100%);
+            }
+            // .p-header__banner-bottom-right .p-header__banner-text として出力
+            #{$this}-text {
+                @include media(pc) {
+                    // 右下に寄せて微調整
+                    @include flexbox(flex-end, flex-end);
+                    padding: {
+                        right: 2rem;
+                        bottom: 2rem;
+                    }
+                    // テキストを右寄せして微調整
+                    text-align: right;
+                    font: {
+                        weight: 700;
+                        size: clamp(1.25rem, 1.1893rem + 0.2589vw, 1.5rem);
+                    }
+                }
+            }
+        }
+        // .p-header__banner-text の全体的な調整
+        &-text {
+            height: 100%;
+            @include text-uppercase();
+        }
+    }
+    // ファーストビューに設置するタイトル類の設定
+    &__title {
+        display: none;
+        @include media(pc) {
+            display: block;
+        }
+        @include media(pc) {
+            // PCでは右側中央付近に設置
+            position: absolute;
+            top: 40%;
+            right: 10%;
+            // Y方向の軸合わせ（top:*で調整してもOK）
+            transform: translateY(-50%);
+        }
+        h1 {
+            // ブランドロゴ
+            font: {
+                weight: 900;
+                size: clamp(3rem, 1.9078rem + 4.6602vw, 7.5rem);
+            }
+            @include text-uppercase();
+        }
+        &-text {
+            // 全体的な調整
+            font: {
+                weight: 700;
+                size: clamp(1.125rem, 0.8519rem + 1.165vw, 2.25rem);
+            }
+            @include media(pc) {
+                text-align: right;
+                line-height: 3rem;
+            }
+        }
+        &-logo {
+            width: 100px;
+        }
+    }
+    // ファーストビューに設置するサブタイトルの設定
+    &__subtitle {
+        font: {
+            weight: 700;
+            size: clamp(1.25rem, 0.5825rem + 2.8479vw, 4rem);
+        }
+        position: static;
+        height: 50%;
+        @include flexbox();
+
+        @include media(pc) {
+            height: 0;
+            display: block;
+            text-align: left;
+            // 左下にサブタイトルを配置
+            position: absolute;
+            bottom: 30%;
+            left: 5%;
+        }
+    }
+}

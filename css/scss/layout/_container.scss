@@ -1,0 +1,19 @@
+// 左右幅をコントロールするコンテナレイアウトです。
+// 基本はbootstrapのcontainerクラスを利用しますが、左右幅を調整したい際に利用します。
+// col-* + mx-auto で同様のスタイルが適用できます。
+
+@use "../global/index" as *;
+
+$containers: (
+    small: 700px,
+    medium: 960px,
+    large: 1200px,
+);
+
+@each $container, $size in $containers {
+    .l-container-#{$container} {
+        max-width: $size;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

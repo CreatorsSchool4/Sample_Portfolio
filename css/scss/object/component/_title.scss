@@ -1,0 +1,15 @@
+// タイトルやサブタイトルのスタイル設定ファイルです。
+
+@use "../../global/index" as *;
+
+// セクションのタイトル（各プロジェクトで回転等の処理をしています）
+.c-title {
+    font-size: clamp(1.5rem, 0.4684rem + 4.4013vw, 5.75rem);
+    margin-bottom: 2rem;
+    @include base-title();
+    // サブタイトル部分（主に各セクションの最後の強調フレーズで使用）
+    &-sub {
+        font-size: clamp(1.5rem, 0.8932rem + 2.589vw, 4rem);
+        @include base-title();
+    }
+}

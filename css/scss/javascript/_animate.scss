@@ -1,0 +1,52 @@
+// アニメーション用のCSSファイルです
+
+@use "../global/index" as *;
+
+.js-animate- {
+    // &****の****部分をindex.jsで使用しています。
+
+    // Fadein(ふわっと現れる)アニメーション
+    &fade-in {
+        transform-origin: center;
+        animation: fade-in 3s forwards;
+        // Fadeinアニメーションの設定
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    &slide-in-left {
+        transform-origin: center;
+        animation: slide-in-left 3s forwards;
+        @keyframes slide-in-left {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &slide-in-right {
+        transform-origin: center;
+        animation: slide-in-right 3s forwards;
+        @keyframes slide-in-right {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+}

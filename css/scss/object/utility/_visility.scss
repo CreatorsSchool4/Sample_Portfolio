@@ -1,0 +1,32 @@
+// 端末サイズに応じて表示・非表示を変えるためのユーティリティです。
+
+// Breakpoint(/mixin/_responsive)を取得
+@use "../../global/index" as *;
+
+// mixin/_responsive.scssのブレイクポイントを増やせば自動的に変更されます
+
+// u-hidden-(breakpoint)でbreakpointで指定したサイズ時に非表示にする
+@mixin hidden($breakpoint: pc) {
+    display: block;
+    @include media($breakpoint) {
+        display: none;
+    }
+}
+@each $breakpoint, $n in $breakpoints {
+    .u-hidden-#{$breakpoint} {
+        @include hidden($breakpoint);
+    }
+}
+
+// u-hidden-(breakpoint)でbreakpointで指定したサイズ時に表示にする
+@mixin visible($breakpoint: pc) {
+    display: none;
+    @include media($breakpoint) {
+        display: block;
+    }
+}
+@each $breakpoint, $n in $breakpoints {
+    .u-visible-#{$breakpoint} {
+        @include visible($breakpoint);
+    }
+}

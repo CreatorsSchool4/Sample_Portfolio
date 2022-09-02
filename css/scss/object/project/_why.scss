@@ -1,0 +1,36 @@
+// Whyセクション（動機・教育）のデザイン設定ファイルです。
+
+@use "../../global/index" as *;
+
+.p-why {
+    position: relative;
+    &__title {
+        font-size: clamp(2.25rem, -2.1012rem + 18.4176vw, 20rem);
+        margin-bottom: 0;
+        @include media(pc) {
+            color: rgba($color: $main-color, $alpha: 0.3);
+            // rotate3dで傾きを調整し、パース(perspective)で奥行きを設定してます。
+            transform: perspective(600px) rotate3d(0, -1, 0, -30deg);
+        }
+    }
+    &__point {
+        text-align: center;
+
+        p {
+            line-height: 1.5;
+        }
+        &-title {
+            font: {
+                weight: 700;
+            }
+        }
+        &-comment {
+            font: {
+                weight: 700;
+                size: clamp(1.25rem, 1.0661rem + 0.7782vw, 2rem);
+            }
+            height: 75px;
+            @include flexbox();
+        }
+    }
+}

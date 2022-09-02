@@ -1,0 +1,61 @@
+// 制作実績セクションのデザイン設定ファイルです。
+
+@use "../../global/index" as *;
+
+.p-works {
+    position: relative;
+    &__title {
+        font-size: clamp(2.25rem, -2.1012rem + 18.4176vw, 20rem);
+        @include media(pc) {
+            // PC表示の場合にセクションタイトルを背景化し、文字サイズと傾きを調整しています
+            color: rgba($color: $main-color, $alpha: 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 1em;
+            z-index: -1000;
+            transform: perspective(600px) rotate3d(0, 1, 0, -30deg);
+        }
+    }
+
+    &__client {
+        font-weight: 700;
+        &-comment {
+            text-align: center;
+            border-bottom: 1px solid $main-color;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        &-name {
+            line-height: 1.5;
+        }
+    }
+    &__card {
+        
+        &-content {
+            text-align: center;
+
+            // .p-works__card-contentの直下にある最初のp要素だけ大文字にする
+            & > p:first-child {
+                font: {
+                    weight: 700;
+                }
+            }
+        }
+
+        // transformでY軸をずらしてます。
+        // 今回は3枚しかないのでひとつずつ書いてますが、数が増える可能性がある場合は繰り返し処理で記述したほうがスマートです。
+        &-two {
+            @include media(pc) {
+                transform: translateY(50px);
+            }
+        }
+        &-three {
+            @include media(pc) {
+                transform: translateY(100px);
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+// メッセージセクションのデザイン設定ファイルです。
+
+@use "../../global/index" as *;
+
+.p-message {
+    line-height: 1.5;
+    color: $main-color;
+    // メッセージの強調フレーズ部分
+    &__emphasis {
+        font-size: clamp(1.5rem, 1.2549rem + 1.0376vw, 2.5rem);
+        font-weight: 700;
+    }
+    // 1画面内に４フレーズが収まるように設定
+    &__textarea {
+        min-height: calc(100vh / 4);
+    }
+}

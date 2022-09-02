@@ -1,0 +1,22 @@
+// レイアウトのデフォルトスタイルを調整するためのファイル
+// 今回はより詳細な分割をするためにglobalフォルダを使っています。
+// フォントの設定とかに使うと良いかと思います。
+
+@use "../global/index" as *;
+
+html {
+    // スムーススクロール（ページ内リンクを押した時にスクロールする）
+    // JavaScriptやjQueryで実装してもOK
+    scroll-behavior: smooth;
+}
+
+body {
+    // ページ全体のフォントとフォントカラーを指定
+    font-family: $global-font;
+    color: $main-color;
+}
+
+.l-main {
+    width: 100%;
+    overflow: hidden;
+}

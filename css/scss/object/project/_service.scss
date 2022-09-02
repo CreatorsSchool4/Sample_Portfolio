@@ -1,0 +1,21 @@
+// サービスセクションのデザイン設定ファイルです。
+
+@use "../../global/index" as *;
+
+.p-service {
+    position: relative;
+    &__title {
+        font-size: clamp(2.25rem, -2.1012rem + 18.4176vw, 20rem);
+        @include media(pc) {
+            color: rgba($color: $main-color, $alpha: 0.3);
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 1em;
+            z-index: -1000;
+            transform: perspective(300px) rotate3d(1, 0, 0, -30deg);
+        }
+    }
+}

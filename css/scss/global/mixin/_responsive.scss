@@ -1,0 +1,15 @@
+// メディアクエリの設定ファイルです。
+// - $breakpointsオブジェクトの中にブレイクポイントを指定してます。
+// - スマホファースト設計なのでメディアクエリはPC/タブレットサイズを指定（スマートフォン表記がデフォルト）
+
+$breakpoints: (
+    "tab": "screen and (min-width: 768px)",
+    "pc": "screen and (min-width: 1280px)",
+) !default;
+
+// @include media(pc or tab)でメディアクエリを指定
+@mixin media($breakpoint: pc) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

@@ -1,0 +1,30 @@
+// マージン関連の補助CSSです
+
+$margin-sizes: (
+    small: 1rem,
+    medium: 2rem,
+    large: 3rem,
+    "": 1.5rem,
+);
+
+// u-marginまたはu-margin-*で使えるようにしています
+@each $margin, $size in $margin-sizes {
+    @if $margin == "" {
+        .u-margin {
+            margin-bottom: $size;
+        }
+    } @else {
+        .u-margin-top-#{$margin} {
+            margin-top: $size;
+        }
+        .u-margin-bottom-#{$margin} {
+            margin-bottom: $size;
+        }
+        .u-margin-left-#{$margin} {
+            margin-left: $size;
+        }
+        .u-margin-right-#{$margin} {
+            margin-right: $size;
+        }
+    }
+}

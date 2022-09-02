@@ -1,0 +1,16 @@
+// ボタンコンポーネントの設定ファイルです。
+
+@use "../../global/index" as *;
+
+// formボタンのみに使っているため、正直コンポーネントファイルに入れる必要はありません。
+.c-button {
+    background-color: $main-color;
+    color: $sub-color;
+    border-radius: 5px;
+    height: 3rem;
+    width: 100%;
+    @include flexbox();
+    &-contact {
+        text-align: right;
+    }
+}

@@ -1,0 +1,16 @@
+// セクションレイアウトの設定です
+
+$sections: (-large: 300px, -medium: 200px, -small: 100px, -xsmall: 50px, "": 100px);
+
+@each $section, $size in $sections {
+    @if $section == "" {
+        .l-section {
+            padding-top: $size;
+            padding-bottom: $size;
+        }
+    } @else {
+        .l-section#{$section} {
+            padding-top: $size;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use "../../global/index" as *;
+
+.c-spinner{
+    display: block;
+    position: relative;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 8px solid $form-border-color;
+    border-top: 7px solid $form-border-color;
+    border-radius: 50px;
+    animation: loading 700ms linear 0ms infinite normal both;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

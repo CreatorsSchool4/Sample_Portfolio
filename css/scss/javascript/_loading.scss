@@ -1,0 +1,52 @@
+// ローディング画面用
+
+@use "../global/index" as *;
+
+// 今回実装するローディングの仕組み
+// ポートフォリオサイトの本体の
+
+.js-loading {
+    // 画面いっぱいに最前面で表示
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: {
+        // 背景は白
+        color: white;
+        // ロゴを配置
+        image: url("/img/logo/logo_default.webp");
+        // ロゴを中央に配置
+        repeat: no-repeat;
+        position: center;
+        size: 50vh auto;
+    }
+    // ローディング後にローディング画面をゆっくり非表示
+    &.is-hidden {
+        pointer-events: none;
+        // アニメーション
+        animation: {
+            // @keyframesで定義したアニメーションを呼び出し
+            name: loading;
+            // 2秒間かけて非表示
+            duration: 2s;
+            // なめらかに変化
+            timing-funciton: ease-in;
+            // ロード完了後2秒後に起動
+            delay: 2s;
+            // 表示後も透明のまま
+            fill-mode: forwards;
+        }
+    }
+}
+// ゆっくり非表示にするアニメーション
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

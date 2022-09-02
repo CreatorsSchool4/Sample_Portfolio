@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ファビコン -->
+    <link rel="icon" href="./img/favicon.ico">
+
+    <!-- BootstrapのGridCSSを読み込み -->
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+
+    <!-- 独自のCSS 読みやすい版 -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+
+    <!-- 圧縮板のCSS こちらを読み込みます -->
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <!-- ブラウザのタブに表示されたり、検索欄に表示されるタイトル -->
+    <title>ジム・トレーナー特化のGYM STUDIO</title>
+
+    <!-- OGP等の各種設定（URLをシェアした時のカード表記等） -->
+    <!-- 設定は面倒くさいので、CS4のジェネレーターを使用すると便利です -->
+    <!-- ジェネレーターはこちら　→　
+        https://doc.studiomi.work/free-contents/meta-tag-generator/ -->
+    <meta name="title" content="ジム・トレーナー特化のGYM STUDIO">
+    <meta name="description" content="ポートフォリオのサンプルです。by Creators School 4.0">
+    <meta name="keywords" content="LP制作,Web制作,SEO,ジム,トレーナー,パーソナル">
+
+    <!-- Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cs4-portfolio-sample.netlify.app/">
+    <meta property="og:title" content="ジム・トレーナー特化のGYM STUDIO">
+    <meta property="og:description" content="ポートフォリオのサンプルです。by Creators School 4.0">
+    <meta property="og:image" content="https://cs4-portfolio-sample.netlify.app/img/picture/my-profile.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cs4-portfolio-sample.netlify.app/">
+    <meta property="twitter:title" content="ジム・トレーナー特化のGYM STUDIO">
+    <meta property="twitter:description" content="ポートフォリオのサンプルです。by Creators School 4.0">
+    <meta property="twitter:image" content="https://cs4-portfolio-sample.netlify.app/img/picture/my-profile.webp">
+</head>
+
+<body>
+    <!-- ローディング画面 *ロード後はis-hiddenが付与されます -->
+    <div class="js-loading">
+    </div>
+
+    <!-- ここから始まります。 -->
+    <div class="l-main" id="app">
+        <!-- ファーストビューセクション -->
+        <header class="l-header p-header">
+            <!-- PC表示の左上 -->
+            <div class="p-header__banner p-header__banner-top-left container-fluid">
+                <div class="p-header__banner-text">
+                    <div class="container">
+                        <div class="row">
+                            <!-- PC表記では下に、SP表示では上に配置 -->
+                            <div class="col-12 order-2 order-md-1">
+                                <p>gym studio</p>
+                            </div>
+                            <!-- PC表記では上に、SP表示では下に配置 -->
+                            <div class="col-12 col-md-6 order-1 order-md-2">
+                                <div class="row">
+                                    <div class="col-4 col-md-12 p-header__banner-logo">
+                                        <!-- ロゴをクリックすると一番上にジャンプ -->
+                                        <a href="#"><img src="img/logo/logo_reverse.webp" class="c-logo" alt="gym studio logo"></a>
+                                    </div>
+                                    <!-- PC表示では非表示 -->
+                                    <div class="col-8 p-header__banner-logo-title">
+                                        <p>ジム・パーソナルトレーナー専門<br>Web制作スタジオ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 中央右のテキストコンテンツ -->
+            <div class="p-header__title">
+                <div class="p-header__title-text">
+                    <img src="img/logo/logo_reverse.webp" class="p-header__title-logo" alt="gym studio logo">
+                    <p>ジム・パーソナルトレーナー専門</p>
+                    <p>Web制作スタジオ</p>
+                </div>
+                <h1>gym studio</h1>
+            </div>
+            <!-- 中央左のテキストコンテンツ -->
+            <div class="p-header__subtitle">
+                <p>もう、集客は忘れましょう。</p>
+                <p>ジム運営者・トレーナーの皆さま。</p>
+            </div>
+            <!-- PCの左下の表示（SP下部固定バナー） -->
+            <div class="p-header__banner p-header__banner-bottom-right">
+                <div class="p-header__banner-text">
+                    <div>
+                        <p><a href="#contact-form">お見積り<br class="u-visible-pc">ご相談は<br class="u-visible-pc">こちらから</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Messageセクション(共感) -->
+        <section id="message" class="l-section">
+            <div class="p-message container l-container-medium">
+                <div class="p-message__textarea">
+                    <!-- scrollspy属性が出てきます。これはJavaScriptファイルで定義したアニメーションを動かすためのオリジナル属性です。 -->
+                    <p scrollspy="slide-in-right">
+                        ジムでトレーナーとして働き、<br>Web制作会社に勤めてわかったこと。<br>それは<span
+                            class="p-message__emphasis">ジム運営者・トレーナー</span>は<br><span
+                            class="p-message__emphasis">考えることが多すぎる</span>ということ。
+                    </p>
+                </div>
+                <div class="p-message__textarea u-text-right">
+                    <p scrollspy="slide-in-left">
+                        集客・トレーニングプラン・予約管理…<br><span class="p-message__emphasis">お客さんの身体のことだけ</span><br>考えていたいのに。
+                    </p>
+                </div>
+                <div class="p-message__textarea">
+                    <p scrollspy="slide-in-right">
+                        ジム・トレーナーの役目は<br><span class="p-message__emphasis">最適なトレーニング</span>の提供であり、<br>決して<span
+                            class="p-message__emphasis">集客ではない</span>。
+                    </p>
+                </div>
+                <div class="u-text-right p-message__textarea">
+                    <p scrollspy="slide-in-left">
+                        <span class="p-message__emphasis">餅は餅屋に</span><br><span
+                            class="p-message__emphasis">集客は集客のプロに</span><br>任せてください。
+                    </p>
+                </div>
+            </div>
+            <div class="l-section-small">
+                <p class="c-title-sub js-fade-in">GYM STYLEの理想は</p>
+                <p class="c-title-sub js-fade-in">「トレーナーが集客しないジム」</p>
+            </div>
+        </section>
+
+        <!-- Worksセクション(制作実績) -->
+        <section class="p-works l-section-small">
+
+            <!-- セクションタイトル -->
+            <!-- PC表示の場合は背面に大きく映ります。 -->
+            <h2 class="c-title p-works__title">Works</h2>
+
+            <div class="container">
+                <div class="row">
+                    <!-- カードコンポーネントです。ReactやVueで繰り返したほうがラクです  -->
+                    <!-- 1つ目のカード -->
+                    <div class="col-md-4 col-12 u-margin-bottom-large" scrollspy="fade-in">
+                        <!-- カードの外枠。影で縁取りしてます。 -->
+                        <div class="c-card p-works__card-one">
+                            <!-- カードのヘッダー部分（罫線より上側） -->
+                            <div class="row c-card__header">
+                                <!-- 左側に各種テキスト、右側に画像を配置 -->
+                                <div class="col-12 col-md-6 p-works__client">
+                                    <p class="p-works__client-comment">口コミが増えるLPを<br>見たのは初めてでした</p>
+                                    <p class="p-works__client-name">〇〇ジム</p>
+                                    <p class="p-works__client-name">山田様</p>
+                                </div>
+                                <!-- クライアントの画像 -->
+                                <div class="col-12 col-md-6">
+                                    <img src="img/picture/yamada.webp" class="c-card__image" alt="山田様">
+                                </div>
+                            </div>
+                            <div class="c-card__body">
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>お悩み</p>
+                                    <p>「本当は大手ジムのように<br>口コミで広めたいんです…」</p>
+                                </div>
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>プラン</p>
+                                    <p>LP制作+Lステップ構築<br>+GYM STUDIO Network</p>
+                                </div>
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>施策結果</p>
+                                    <p>口コミ重視のLP制作と<br>GYM STUDIO Networkを利用<br>→Instagram広告費30%減を達成</p>
+                                </div>
+                                <!-- 個別のポートフォリオへの誘導ではなく、アラートを表示させる -->
+                                <div class="c-card__link">
+                                    <p class="c-card__link-text" onclick="onAlert('あなたなら何を入れますか？')">ポートフォリオを見る→</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2つ目のカード -->
+                    <div class="col-md-4 col-12 u-margin-bottom-large p-works__card-two" scrollspy="fade-in">
+                        <div class="c-card p-works__card-one">
+                            <div class="row c-card__header">
+                                <div class="col-12 col-md-6 p-works__client">
+                                    <p class="p-works__client-comment">LINEをやらなきゃと<br>思っていたところに</p>
+                                    <p class="p-works__client-name">ヨガインストラクター</p>
+                                    <p class="p-works__client-name">鈴木様</p>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="img/picture/tanaka.webp" class="c-card__image" alt="田中">
+                                </div>
+                            </div>
+                            <div class="c-card__body">
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>お悩み</p>
+                                    <p>「リピートが増えず、<br>休眠客にはノータッチ状態…」</p>
+                                </div>
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>プラン</p>
+                                    <p>LP制作+Lステップ構築</p>
+                                </div>
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>施策結果</p>
+                                    <p>リピーター重視の施策と<br>今後の休眠客向けの施策を実施<br>→リピート率が15％増加<br>休眠客の1割が再訪</p>
+                                </div>
+                                <div class="c-card__link">
+                                    <p class="c-card__link-text" onclick="onAlert('あなたなら何を入れますか？')">ポートフォリオを見る→</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3つ目のカード -->
+                    <div class="col-md-4 col-12 u-margin-bottom-large p-works__card-three" scrollspy="fade-in">
+                        <div class="c-card p-works__card-one">
+                            <div class="row c-card__header">
+                                <div class="col-12 col-md-6 p-works__client">
+                                    <p class="p-works__client-comment">集客は彼に任せる<br>私はサービスを提供する</p>
+                                    <p class="p-works__client-name">パーソナルトレーナー</p>
+                                    <p class="p-works__client-name">鈴木様</p>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img src="img/picture/suzuki.webp" class="c-card__image" alt="鈴木様">
+                                </div>
+                            </div>
+                            <div class="c-card__body">
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>お悩み</p>
+                                    <p>「口コミと折込チラシだけで集客<br>新規顧客は月に2名ほど…」</p>
+                                </div>
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>プラン</p>
+                                    <p>LP制作・運用+Lステップ構築・運用<br>+GYM STUDIO Network</p>
+                                </div>
+                                <div class="p-works__card-content u-margin-bottom-small">
+                                    <p>施策結果</p>
+                                    <p>集客プラン立案からサポート<br>7ヶ月目の新規顧客数が過去最高の24名に</p>
+                                </div>
+                                <div class="c-card__link">
+                                    <p class="c-card__link-text" onclick="onAlert('あなたなら何を入れますか？')">ポートフォリオを見る→</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Whyセクション（動機・教育） -->
+        <section class="l-section-medium js-animate">
+
+            <p class="c-title-sub u-margin-bottom-large">「ジム・トレーナーの<br>Webマーケティングは難しい」<br>その理由は…</p>
+
+            <div class="p-why container l-container-medium">
+                <!-- グリッドを利用して段組み -->
+                <!-- 複雑そうに見えますが
+                1段目はWhyの文字+Point2つを入れ子にしているだけです -->
+                <div class="row">
+                    <div class="col-12 col-md-6 order-0 u-margin-bottom-medium">
+                        <h2 class="c-title p-why__title">Why</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="p-why__point u-margin-bottom-medium col-12">
+                                <p class="p-why__point-title">Point</p>
+                                <p class="p-why__point-comment">地域性があること</p>
+                                <p>対面で行うからこそ、<br>地域性が重要になります。</p>
+                            </div>
+                            <div class="p-why__point u-margin-bottom-medium col-12">
+                                <p class="p-why__point-title">Point</p>
+                                <p class="p-why__point-comment">休眠率が高いこと</p>
+                                <p>何も対策をしてないと<br>お客さんはすぐにサボります。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-why__point u-margin-bottom-medium col-12 col-md-6">
+                        <p class="p-why__point-title">Point</p>
+                        <p class="p-why__point-comment">リピート率が重要なこと</p>
+                        <p>新規顧客の獲得は既存顧客獲得の<br>「5倍」のコストがかかります</p>
+                    </div>
+                    <div class="p-why__point u-margin-bottom-medium col-12 col-md-6">
+                        <p class="p-why__point-title">Point</p>
+                        <p class="p-why__point-comment">口コミの重要性が高いこと</p>
+                        <p>スポーツジムは効果が見えにくい。<br>口コミや評判は何より重要なポイントです。</p>
+                    </div>
+                    <div class="p-why__point u-margin-bottom-medium col-12">
+                        <p class="p-why__point-title">Point</p>
+                        <p class="p-why__point-comment">トレーニング設計の時間が必要なこと</p>
+                        <p>お客さまのことを考える<br>その時間を確保していますか？</p>
+                        <p>中小企業が大手ジムに勝つためには<br>パーソナライズが不可欠です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviceセクション（サービス内容） -->
+        <section>
+            <div class="l-section">
+                <p class="c-title-sub u-margin-bottom-large">つまり、
+                </p>
+                <ul class="c-title-sub u-margin-bottom-large">
+                    <li>集客</li>
+                    <li>リピート推進</li>
+                    <li>口コミ対策</li>
+                </ul>
+                <p class="c-title-sub u-margin-bottom-large">全てにバランスよく対応する<br>ノウハウが必要ということ。</p>
+                <p class="c-title-sub">GYM STUDIOはその課題を<br>独自の集客システムによって<br>解決しています</p>
+            </div>
+
+            <div class="p-service container">
+                <h2 class="c-title p-service__title">Service</h2>
+                <div class="row gap-3 u-margin">
+                    <!-- PC画面では横並び、SP画面では縦並びに表示 -->
+                    <div class="col-md-3 col-12">
+                        <div class="c-card-radius">
+                            <img src="img/logo/color.svg" alt="LP制作">
+                        </div>
+                        <div class="c-card__body">
+                            <h3 class="c-card__title">ランディングページ作成</h3>
+                            <p>貴方のジム・トレーニングを選ぶ分水嶺。それがランディングページです。当スタジオは「予約・契約」に特化したランディングページ制作をさせていただきます。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="c-card-radius">
+                            <img src="img/logo/people.svg" alt="GYM STUDIO Network">
+                        </div>
+                        <div class="c-card__body">
+                            <h3 class="c-card__title">GYM STUDIO Network</h3>
+                            <p>ジム・トレーナーは口コミが命。当スタジオが形成する独自のインフルエンサーネットワークで口コミマーケティングを促進します。</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="c-card-radius">
+                            <img src="img/logo/line_logo.svg" alt="LINE運用">
+                        </div>
+                        <div class="c-card__body">
+                            <h3 class="c-card__title">LINE運用</h3>
+                            <p>24時間365日、いつでも顧客対応。LINE公式アカウントとLステップを用いて集客・予約管理・コミュニケーションを一元化。休眠客の掘り起こしやリピートの推進を</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="c-card-radius">
+                            <img src="img/logo/wordpress.svg" alt="Webサイト制作">
+                        </div>
+                        <div class="c-card__body">
+                            <h3 class="c-card__title">Webサイト作成</h3>
+                            <p>あなただけの独自ホームページ。 お客様の予約・管理機能や 会員限定機能も実装可能な WordPress製サイトを作成します。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-button-contact">
+                    <!-- お見積り事例の別ページ等を用意すると理想です -->
+                    <!-- 今回は直接コンタクトフォームにリンクしています -->
+                    <p><a href="#contact-form">お見積り例はこちら→</a></p>
+                    <p><small>1円単位、工数単位のお見積りをさせていただきます。</small></p>
+                </div>
+            </div>
+            <div class="l-section-small">
+                <p class="c-title-sub u-margin-bottom-large">もう、あなたのジムは<br>集客する必要がありません。
+                </p>
+            </div>
+        </section>
+
+        <!-- Profileセクション（自己紹介） -->
+        <section class="p-profile l-section-small">
+            <div class="container">
+                <h2 class="c-title p-profile__title">Profile</h2>
+                <div class="c-card row">
+                    <!-- 左側に写真 -->
+                    <div class="col-12 col-md-6 u-margin p-profile__image">
+                        <img src="img/picture/my-profile.webp" class="c-card__image" alt="">
+                    </div>
+                    <!-- 右側に文章 -->
+                    <div class="col-12 col-md-6 c-card__body">
+                        <h3 class="c-card__title">ジム田トレ男</h3>
+                        <p class="c-card__title-sub">Web Creator</p>
+                        <p>1990年 6月 6日 東京都新宿区生まれ</p>
+                        <p class="c-card__title-sub">略歴</p>
+                        <!-- テーブルレイアウトで横並びに表示 -->
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th class="col-3">〇〇年</th>
+                                    <td class="col-9">〇〇大学〇〇学部卒業</td>
+                                </tr>
+                                <tr>
+                                    <th>〇〇年</th>
+                                    <td>大手ジム〇〇でトレーナーとして勤務</td>
+                                </tr>
+                                <tr>
+                                    <th>〇〇年</th>
+                                    <td>Web制作会社〇〇で<br>Webマーケティング業務に従事</td>
+                                </tr>
+                                <tr>
+                                    <th>〇〇年</th>
+                                    <td>独立しジム・トレーナー特化のWeb制作会社 「GYM STUDIO」を立ち上げ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <div scrollspy="fade-in">
+            <div class="l-section-medium" id="target">
+                <p class="c-title-sub">ジム運営者・トレーナーの皆さま</p>
+                <p class="c-title-sub">「集客」の二文字を忘れましょう</p>
+            </div>
+            <div class="container l-section-medium" id="contact-form">
+                <p class="c-title-sub u-margin-bottom-large">お問い合わせ</p>
+                <!-- フォームはここから -->
+                <!-- 今回はJavaScript側で送信停止させ、アラートを表示させています -->
+                <form action="" id="test-form" class="p-form__body" onsubmit="onSubmit('ご覧いただきありがとうございました！')">
+                    <!-- お名前入力欄 -->
+                    <div class="u-margin">
+                        <label class="p-form__label" for="text-your-name">お名前</label>
+                        <input class="p-form__input" type="text" id="text-your-name" name="" placeholder="ジム田ジム男"
+                            value="" />
+                    </div>
+                    <!-- メールアドレス入力欄 -->
+                    <div class="u-margin">
+                        <label class="p-form__label" for="email-your-mail">メールアドレス</label>
+                        <input class="p-form__input" type="email" id="email-your-mail" name=""
+                            placeholder="*****@gmail.com" value="" />
+                    </div>
+                    <!-- 件名設定欄 -->
+                    <div class="u-margin">
+                        <label class="p-form__label" for="select-subject">現在のお悩み</label>
+                        <select name="" id="select-subject" class="p-form__input">
+                            <option value="">新規顧客獲得が集まらない</option>
+                            <option value="">リピート客が増えない</option>
+                            <option value="">どこから手をつけていいかもわからない</option>
+                        </select>
+                    </div>
+                    <!-- テキスト本文 -->
+                    <div class="u-margin">
+                        <label class="p-form__label" for="textarea-message">メッセージ</label>
+                        <textarea class="p-form__input" name="" id="textarea-message" rows="5" value=""
+                            placeholder="お問い合わせ内容"></textarea>
+                    </div>
+                    <!-- 規約同意チェック -->
+                    <div class="u-margin">
+                        <label for="chekcbox-">
+                            <input type="checkbox" name="" id="chekcbox-">
+                            当フォームはサンプルのため送信されません。
+                        </label>
+                    </div>
+                    <!-- 送信ボタン -->
+                    <div>
+                        <!-- JavaScript側で制御しているため、どこにも送信されずにアラートが出ます -->
+                        <button type="submit" class="c-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- フッターセクション -->
+        <footer class="p-footer l-section">
+            <p><a href="https://twitter.com/CS451364464" target="_blank" rel="noopener noreferrer">© Creators School
+                    4.0</a></p>
+        </footer>
+        <!-- Creators School 4.0 -->
+    </div>
+
+    <!-- JavaScriptファイルの呼び出し -->
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

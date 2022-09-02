@@ -1,0 +1,81 @@
+// カードコンポーネントの設定です
+
+@use "../../global/index" as *;
+
+.c-card {
+    max-width: 960px;
+    margin: auto;
+    background-color: white;
+    padding: 1rem;
+    line-height: 1.5;
+    border-radius: 5px;
+
+    $this: &;
+    @include box-shadow();
+
+    // 丸型のカードです
+    &-radius {
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 2rem auto;
+        @include flexbox();
+        @include box-shadow(rgba($color: $main-color, $alpha: 0.3));
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: clamp(1.5rem, 1.3161rem + 0.7782vw, 2.25rem);
+        @include base-title();
+        &-sub {
+            font: {
+                family: $global-font-sub;
+                size: clamp(1.25rem, 1.1274rem + 0.5188vw, 1.75rem);
+                weight: 700;
+            }
+        }
+    }
+    // カード内のヘッダー
+    &__header {
+        padding-bottom: 1rem;
+        min-height: 200px;
+        & > div {
+            @include flexbox();
+        }
+        border-bottom: 0.1px solid rgba($color: $main-color, $alpha: 0.3);
+    }
+    // カードの本体部分の余白
+    &__body {
+        padding-top: 1rem;
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+    // カード内の画像
+    &__image {
+        // クライアントの画像です。縦横比を調整したい場合はobject-fitやaspect-ratio等でいじってあげてください。
+        // 今回は元画像の縦横比が同じなので省略してます。
+        width: 100%;
+        height: auto;
+    }
+    &__link {
+        // リンクを右寄せする
+        text-align: right;
+        &-text {
+            // 幅に合わせた下線を引く
+            display: inline-block;
+            padding-bottom: 0.25rem;
+            border-bottom: 0.5px solid $main-color;
+            transition: 1s;
+            font-weight: 700;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

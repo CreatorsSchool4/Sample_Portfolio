@@ -1,0 +1,27 @@
+// 汎用的なmixinファイルです
+
+// ロゴの文字を全て大文字に変更
+@mixin text-uppercase() {
+    text-transform: uppercase;
+}
+
+// 汎用的なFlexboxの設定
+// 主に中央寄せに使用しています
+@mixin flexbox($align-items: center, $justify-content: center, $direction: column) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $direction;
+}
+
+// Titleの汎用的なパーツ
+@mixin base-title() {
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+// box-shadow
+@mixin box-shadow($main-color: gray) {
+    box-shadow: 0 0 5px $main-color, 0 0 5px $main-color, 0 0 5px $main-color;
+}

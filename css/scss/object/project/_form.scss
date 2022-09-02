@@ -1,0 +1,26 @@
+// フォームセクションの設定ファイルです。
+
+@use "../../global/index" as *;
+
+.p-form {
+    // フォームの横幅を指定
+    &__body{
+        max-width: 720px;
+        margin: auto;
+    }
+    // フォームのインプット部分
+    // 今回は全て同じデザインのため、一律に設定しています
+    &__input {
+        display: inline-block;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $form-border-color;
+        padding: 0.5rem 0.25rem;
+    }
+    // フォームのラベル部分
+    &__label {
+        display: inline-block;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+}

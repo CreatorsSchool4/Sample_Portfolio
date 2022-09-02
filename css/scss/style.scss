@@ -1,0 +1,16 @@
+// コンパイル時に出力されるファイルです。
+
+// ResetCSS等を読み込み
+@use "foundation/index" as faundation;
+
+// 変数やmixinを読み込み
+@use "global/index" as global;
+
+// レイアウトを読み込み
+@use "layout/index" as layout;
+
+// 各種パーツを読み込み
+@use "object/index" as object;
+
+// JavaScript用のCSSを読み込み
+@use "javascript/index" as js;
